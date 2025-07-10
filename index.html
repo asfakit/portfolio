@@ -1,160 +1,224 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhamed Asfak Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    section {
+      padding: 100px 20px;
+    }
+    .links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .main-container .image img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+    .content h1 {
+      font-size: 2.5em;
+    }
+    .typewriter span {
+      font-weight: bold;
+      color: #007BFF;
+    }
+    .social-links a {
+      margin: 0 8px;
+      font-size: 1.5em;
+      color: #333;
+    }
+    .btn button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .skills-icons img {
+      margin: 5px;
+    }
+    .skills-list li {
+      margin-bottom: 5px;
+    }
+    .project, .service {
+      margin-top: 20px;
+    }
+    img {
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav>
     <div class="nav-container">
       <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-        <span>ASFAK</span>
+        <span>Muhamed</span>
       </div>
       <div class="links">
-        <div class="link"><a href="#">Home</a></div>
-        <div class="link"><a href="#about">About</a></div>
-        <div class="link"><a href="#skills">Skills</a></div>
-        <div class="link"><a href="#services">Services</a></div>
-        <div class="link"><a href="#projects">Projects</a></div>
-        <div class="link contact-btn"><a href="#contact">Contact</a></div>
-      </div>
-      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-    </div>
-    <div class="dropdown">
-      <div class="links">
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
       </div>
     </div>
   </nav>
 
-  <main>
-    <section>
-      <div class="main-container">
-        <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
-          <img src="main.png" alt="Muhamed Asfak" />
+  <!-- HOME / HERO Section -->
+  <section id="home">
+    <div class="main-container">
+      <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+        <img src="main.png" alt="Muhamed Asfak" />
+      </div>
+      <div class="content">
+        <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Muhamed Asfak</span></h1>
+        <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span>Data Analyst</span></div>
+        <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+          I am a Data Analyst and I analyse many datasets and turn them into insightful dashboards.
+          I work with tools like <strong>Excel</strong>, <strong>Power BI</strong>, <strong>Tableau</strong>, <strong>SQL</strong>, and I also code with <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>.
+          I'm skilled in IDEs like <strong>VS Code</strong>, <strong>PyCharm</strong> and creative tools like <strong>Photoshop</strong>. I also build apps and design modern websites.
+        </p>
+        <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+          <a href="https://github.com/asfakit" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/muhamed-asfak-5551a0255" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://instagram.com/as.fak.007" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/DataWithAsfak" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
-        <div class="content">
-          <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
-            Hey I'm <span>Muhamed Asfak</span>
-          </h1>
-          <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
-            I'm a <span></span>
-          </div>
-          <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
-            I am a Data Analyst and I analyse many datasets and turn them into insightful dashboards. I work with tools like
-            <strong>Excel</strong>, <strong>Power BI</strong>, <strong>Tableau</strong>, <strong>SQL</strong>, and I also code with
-            <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>. I'm skilled in IDEs like
-            <strong>VS Code</strong>, <strong>PyCharm</strong> and creative tools like <strong>Photoshop</strong>. I also build apps and
-            design modern websites.
-          </p>
-          <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
-            <a href="https://github.com/asfakit" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/muhamed-asfak-5551a0255" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://instagram.com/as.fak.007" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/DataWithAsfak" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-          </div>
-          <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-            <a href="mailto:muhamedasfak60@gmail.com"><button>Contact Me</button></a>
-          </div>
+        <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+          <a href="mailto:muhamedasfak60@gmail.com"><button>Contact Me</button></a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about" data-aos="fade-up" data-aos-duration="1000">
-      <h2>About</h2>
-      <p>Hi, I'm Muhamed Asfak, a passionate Data Analyst who transforms raw data into powerful insights and interactive dashboards.</p>
-      <p>I work with Excel, Power BI, Tableau, SQL, and Python for analysis and automation. I also integrate visual insights into web apps using HTML, CSS, and JS.</p>
-    </section>
+  <!-- ABOUT Section -->
+  <section id="about" data-aos="fade-up" data-aos-duration="1000">
+    <h2>About</h2>
+    <p>
+      Hi, I'm Muhamed Asfak, a passionate Data Analyst who transforms raw data into powerful insights and interactive dashboards.
+      I specialize in helping businesses make informed decisions through data storytelling and visualization.
+    </p>
+    <p>
+      With hands-on experience in tools like Excel, Power BI, Tableau, and SQL, I bring clarity to complex data.
+      I also leverage Python for data cleaning, analysis, and automation.
+      My knowledge of HTML, CSS, and JavaScript allows me to integrate visual insights into web platforms.
+    </p>
+  </section>
 
-    <section id="skills" data-aos="fade-up" data-aos-duration="1000">
-      <h2>Skills</h2>
-      <div class="skills-icons">
-        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" />
-        <img src="https://img.icons8.com/color/48/000000/power-bi.png" />
-        <img src="https://img.icons8.com/color/48/000000/tableau-software.png" />
-        <img src="https://img.icons8.com/color/48/000000/sql.png" />
-      </div>
-      <ul class="skills-list">
-        <li>📊 Analytical Skills</li>
-        <li>Data Manipulation & Processing</li>
-        <li>Exploratory Data Analysis (EDA)</li>
-        <li>Data Visualization & Reporting</li>
-        <li>Statistical Analysis</li>
-        <li>Problem-Solving & Business Insight</li>
-      </ul>
-    </section>
+  <!-- SKILLS Section -->
+  <section id="skills" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Skills</h2>
+    <div class="skills-icons">
+      <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" />
+      <img src="https://img.icons8.com/color/48/000000/power-bi.png" />
+      <img src="https://img.icons8.com/color/48/000000/tableau-software.png" />
+      <img src="https://img.icons8.com/color/48/000000/sql.png" />
+    </div>
+    <ul class="skills-list">
+      <li>📊 Analytical Skills</li>
+      <li>Data Manipulation & Processing</li>
+      <li>Exploratory Data Analysis (EDA)</li>
+      <li>Data Visualization & Reporting</li>
+      <li>Statistical Analysis</li>
+      <li>Problem-Solving & Business Insight</li>
+    </ul>
+  </section>
 
-    <section id="projects" data-aos="fade-up" data-aos-duration="1000">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Hand Gesture Recognition</h3>
-        <p><strong>Tech:</strong> Python, OpenCV, MediaPipe, NumPy</p>
-        <ul>
-          <li>Real-time gesture recognition using AI and computer vision</li>
-          <li>Gesture classification using CNN</li>
-          <li>MediaPipe for 21-point landmark detection</li>
-        </ul>
-        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*0nPBTCJo93jMYt0opwRjzw.gif" alt="Hand AI" />
-      </div>
-      <div class="project">
-        <h3>CGPA Calculator App</h3>
-        <p><strong>Tech:</strong> Python, Java/Kotlin, Android Studio</p>
-        <ul>
-          <li>Calculates semester-wise & cumulative CGPA</li>
-          <li>Responsive UI for college students</li>
-        </ul>
-        <img src="https://i.pinimg.com/originals/f5/3d/97/f53d973f89e841c300c65e0a47ce13c2.gif" alt="CGPA App" />
-      </div>
-    </section>
-
-    <section id="services" data-aos="fade-up" data-aos-duration="1000">
-      <h2>Services</h2>
-      <div class="service">
-        <h4>🛠️ Data Analysis & Business Intelligence</h4>
-        <p>Data cleaning, EDA, visualization, dashboard creation in Excel, Python, Power BI, Tableau.</p>
-      </div>
-      <div class="service">
-        <h4>🌐 Web Development</h4>
-        <p>Modern and responsive websites using HTML, CSS, JS, PHP with backend integration.</p>
-      </div>
-      <div class="service">
-        <h4>📱 App Development</h4>
-        <p>Utility Android apps built with Java/Kotlin & Python backends, optimized for students and businesses.</p>
-      </div>
-    </section>
-
-    <section id="contact" data-aos="fade-up" data-aos-duration="1000">
-      <h2>Contact Me</h2>
-      <p>Have a project or idea? Let's work together!</p>
+  <!-- PROJECTS Section -->
+  <section id="projects" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Hand Gesture Recognition using AI</h3>
+      <p><strong>Technologies:</strong> Python, OpenCV, MediaPipe, NumPy</p>
       <ul>
-        <li>📧 Email: muhamedasfak60@gmail.com</li>
-        <li>📱 Phone: +91 97519 97851</li>
-        <li>🔗 LinkedIn: <a href="https://linkedin.com/in/muhamed-asfak-5551a0255">View Profile</a></li>
-        <li>🐱 GitHub: <a href="https://github.com/asfakit">github.com/asfakit</a></li>
+        <li>Real-time hand gesture recognition system using AI.</li>
+        <li>Used MediaPipe for accurate hand landmark detection (21-point model).</li>
+        <li>Used OpenCV for webcam-based gesture tracking and image processing.</li>
+        <li>Gesture classification using CNN.</li>
+        <li>Enabled tasks like app control using gesture recognition.</li>
+        <li>Recognizes both static and dynamic gestures.</li>
+        <li>Achieved high accuracy and real-time performance.</li>
       </ul>
-    </section>
-  </main>
+      <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*0nPBTCJo93jMYt0opwRjzw.gif" alt="Hand Gesture AI">
+    </div>
 
+    <div class="project">
+      <h3>CGPA Calculator App</h3>
+      <p><strong>Technologies:</strong> Python, Android Studio, Java/Kotlin</p>
+      <ul>
+        <li>Developed mobile app to calculate semester & cumulative CGPA.</li>
+        <li>Python used for backend logic and accurate calculations.</li>
+        <li>Frontend built in Android Studio with clean UI.</li>
+        <li>Users enter grades and credits to get CGPA results.</li>
+        <li>Includes validation, error handling, and mobile responsiveness.</li>
+        <li>Helps students efficiently track their academic performance.</li>
+      </ul>
+      <img src="https://i.pinimg.com/originals/f5/3d/97/f53d973f89e841c300c65e0a47ce13c2.gif" alt="CGPA App">
+    </div>
+  </section>
+
+  <!-- SERVICES Section -->
+  <section id="services" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Services</h2>
+    <div class="service">
+      <h4>🛠️ Data Analysis & Business Intelligence</h4>
+      <p>Data cleaning, transformation, and visualization using Python, Excel, Power BI. Specialized in business insight, sales/customer analysis.</p>
+    </div>
+    <div class="service">
+      <h4>🌐 Web Development</h4>
+      <p>Responsive websites with HTML, CSS, JavaScript, PHP. Integrated APIs and database features. Optimized for SEO and mobile.</p>
+    </div>
+    <div class="service">
+      <h4>📱 App Development</h4>
+      <p>Android apps built with Java/Kotlin in Android Studio. Focused on utility apps with clean design and performance optimization.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT Section -->
+  <section id="contact" data-aos="fade-up" data-aos-duration="1000">
+    <h2>Contact Me</h2>
+    <p>Have a project or idea in mind? Let’s work together!</p>
+    <ul>
+      <li>📧 Email: muhamedasfak60@gmail.com</li>
+      <li>📞 Phone: +91 97519 97851</li>
+      <li>🌐 LinkedIn: <a href="https://linkedin.com/in/muhamed-asfak-5551a0255">linkedin.com/in/muhamed-asfak</a></li>
+      <li>🧑‍💻 GitHub: <a href="https://github.com/asfakit">github.com/asfakit</a></li>
+    </ul>
+  </section>
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ offset: 0 });
-    function hamburg() {
-      document.querySelector(".dropdown").style.transform = "translateY(0px)";
-    }
-    function cancel() {
-      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
-    }
   </script>
 </body>
 </html>
