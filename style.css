@@ -304,12 +304,16 @@ h2 {
   }
 }
 
-.project img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.project-image-wrapper {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
 }
 
+.project-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
