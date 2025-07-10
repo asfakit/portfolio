@@ -8,49 +8,94 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
+    /* Core styling here (optional if you have style.css already) */
     html {
       scroll-behavior: smooth;
     }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding-top: 80px;
+      background: #f9f9f9;
+    }
+
     nav {
       position: fixed;
       top: 0;
       width: 100%;
       background: #fff;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    section {
-      padding: 100px 20px;
-    }
-    .links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    .main-container {
+
+    .nav-container {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
-      justify-content: space-around;
-      gap: 20px;
+      padding: 10px 20px;
     }
-    .main-container .image img {
-      max-width: 300px;
-      border-radius: 10px;
-    }
-    .content h1 {
-      font-size: 2.5em;
-    }
-    .typewriter span {
+
+    .logo span {
+      font-size: 1.5em;
       font-weight: bold;
       color: #007BFF;
     }
+
+    .links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .links a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 100px 20px;
+      background: #fff;
+    }
+
+    section:nth-child(even) {
+      background: #f1f1f1;
+    }
+
+    #home .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    #home .image img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    .content h1 {
+      font-size: 2.5em;
+    }
+
+    .typewriter span {
+      color: #007BFF;
+      font-weight: bold;
+    }
+
     .social-links a {
-      margin: 0 8px;
+      margin: 0 10px;
       font-size: 1.5em;
       color: #333;
     }
+
     .btn button {
       padding: 10px 20px;
       font-size: 1em;
@@ -60,27 +105,52 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    .skills-icons img {
-      margin: 5px;
-    }
-    .skills-list li {
-      margin-bottom: 5px;
-    }
-    .project, .service {
-      margin-top: 20px;
-    }
-    img {
-      max-width: 100%;
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        padding: 10px 0;
+      }
+
+      .links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      #home .main-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .content h1 {
+        font-size: 2em;
+      }
+
+      .typewriter {
+        font-size: 1em;
+      }
+
+      .btn button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navigation -->
   <nav>
     <div class="nav-container">
       <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-        <span>Muhamed</span>
+        <span>ASFAK</span>
       </div>
       <div class="links">
         <a href="#home">Home</a>
@@ -90,10 +160,11 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
+      <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
     </div>
   </nav>
 
-  <!-- HOME / HERO Section -->
+  <!-- HOME Section -->
   <section id="home">
     <div class="main-container">
       <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
@@ -125,12 +196,10 @@
     <h2>About</h2>
     <p>
       Hi, I'm Muhamed Asfak, a passionate Data Analyst who transforms raw data into powerful insights and interactive dashboards.
-      I specialize in helping businesses make informed decisions through data storytelling and visualization.
     </p>
     <p>
-      With hands-on experience in tools like Excel, Power BI, Tableau, and SQL, I bring clarity to complex data.
-      I also leverage Python for data cleaning, analysis, and automation.
-      My knowledge of HTML, CSS, and JavaScript allows me to integrate visual insights into web platforms.
+      I specialize in helping businesses make informed decisions through data storytelling and visualization.
+      With hands-on experience in Excel, Power BI, Tableau, and SQL, I also use Python for data tasks and build visual tools with web tech.
     </p>
   </section>
 
@@ -160,13 +229,9 @@
       <h3>Hand Gesture Recognition using AI</h3>
       <p><strong>Technologies:</strong> Python, OpenCV, MediaPipe, NumPy</p>
       <ul>
-        <li>Real-time hand gesture recognition system using AI.</li>
-        <li>Used MediaPipe for accurate hand landmark detection (21-point model).</li>
-        <li>Used OpenCV for webcam-based gesture tracking and image processing.</li>
+        <li>Real-time gesture recognition using AI & OpenCV.</li>
+        <li>MediaPipe used for 21-point hand detection.</li>
         <li>Gesture classification using CNN.</li>
-        <li>Enabled tasks like app control using gesture recognition.</li>
-        <li>Recognizes both static and dynamic gestures.</li>
-        <li>Achieved high accuracy and real-time performance.</li>
       </ul>
       <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*0nPBTCJo93jMYt0opwRjzw.gif" alt="Hand Gesture AI">
     </div>
@@ -175,12 +240,8 @@
       <h3>CGPA Calculator App</h3>
       <p><strong>Technologies:</strong> Python, Android Studio, Java/Kotlin</p>
       <ul>
-        <li>Developed mobile app to calculate semester & cumulative CGPA.</li>
-        <li>Python used for backend logic and accurate calculations.</li>
-        <li>Frontend built in Android Studio with clean UI.</li>
-        <li>Users enter grades and credits to get CGPA results.</li>
-        <li>Includes validation, error handling, and mobile responsiveness.</li>
-        <li>Helps students efficiently track their academic performance.</li>
+        <li>Mobile app to calculate CGPA efficiently.</li>
+        <li>Python used for logic, Android Studio for UI.</li>
       </ul>
       <img src="https://i.pinimg.com/originals/f5/3d/97/f53d973f89e841c300c65e0a47ce13c2.gif" alt="CGPA App">
     </div>
@@ -190,16 +251,16 @@
   <section id="services" data-aos="fade-up" data-aos-duration="1000">
     <h2>Services</h2>
     <div class="service">
-      <h4>🛠️ Data Analysis & Business Intelligence</h4>
-      <p>Data cleaning, transformation, and visualization using Python, Excel, Power BI. Specialized in business insight, sales/customer analysis.</p>
+      <h4>🛠️ Data Analysis & BI</h4>
+      <p>Data cleaning, dashboarding, and business reporting using Python, Power BI, Excel.</p>
     </div>
     <div class="service">
       <h4>🌐 Web Development</h4>
-      <p>Responsive websites with HTML, CSS, JavaScript, PHP. Integrated APIs and database features. Optimized for SEO and mobile.</p>
+      <p>Responsive websites using HTML, CSS, JS, and APIs.</p>
     </div>
     <div class="service">
       <h4>📱 App Development</h4>
-      <p>Android apps built with Java/Kotlin in Android Studio. Focused on utility apps with clean design and performance optimization.</p>
+      <p>Android apps built using Java/Kotlin with clean UX.</p>
     </div>
   </section>
 
@@ -219,6 +280,11 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({ offset: 0 });
+
+    function toggleMenu() {
+      const links = document.querySelector('.links');
+      links.classList.toggle('show');
+    }
   </script>
 </body>
 </html>
