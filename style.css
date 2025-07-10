@@ -305,9 +305,10 @@ h2 {
 }
 
 .project-image-wrapper img {
-  width: 6.5cm;
-  height: 3cm;
+  width: 15cm;
+  height: 8cm;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
