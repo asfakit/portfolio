@@ -306,12 +306,13 @@ h2 {
 
 .project-image-wrapper {
   text-align: center;
-  margin-top: 15px;
+  margin: 20px auto;
 }
 
 .project-image-wrapper img {
-  width: 150px;       /* Fixed width */
-  height: auto;       /* Keep aspect ratio */
-  border-radius: 10px;
+  width: 6.5cm;
+  height: 3cm;
+  object-fit: cover; /* Prevent stretching */
+  border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
