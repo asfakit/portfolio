@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhamed Asfak Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <span>ASFAK</span>
+      </div>
+      <div class="links">
+        <div class="link"><a href="#">Home</a></div>
+        <div class="link"><a href="#about">About</a></div>
+        <div class="link"><a href="#skills">Skills</a></div>
+        <div class="link"><a href="#services">Services</a></div>
+        <div class="link"><a href="#projects">Projects</a></div>
+        <div class="link contact-btn"><a href="#contact">Contact</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="main-container">
+        <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+          <img src="main.png" alt="Muhamed Asfak" />
+        </div>
+        <div class="content">
+          <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
+            Hey I'm <span>Muhamed Asfak</span>
+          </h1>
+          <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+            I'm a <span></span>
+          </div>
+          <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+            I am a Data Analyst and I analyse many datasets and turn them into insightful dashboards. I work with tools like
+            <strong>Excel</strong>, <strong>Power BI</strong>, <strong>Tableau</strong>, <strong>SQL</strong>, and I also code with
+            <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>. I'm skilled in IDEs like
+            <strong>VS Code</strong>, <strong>PyCharm</strong> and creative tools like <strong>Photoshop</strong>. I also build apps and
+            design modern websites.
+          </p>
+          <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+            <a href="https://github.com/asfakit" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/muhamed-asfak-5551a0255" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://instagram.com/as.fak.007" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/DataWithAsfak" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+          <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+            <a href="mailto:muhamedasfak60@gmail.com"><button>Contact Me</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" data-aos="fade-up" data-aos-duration="1000">
+      <h2>About</h2>
+      <p>Hi, I'm Muhamed Asfak, a passionate Data Analyst who transforms raw data into powerful insights and interactive dashboards.</p>
+      <p>I work with Excel, Power BI, Tableau, SQL, and Python for analysis and automation. I also integrate visual insights into web apps using HTML, CSS, and JS.</p>
+    </section>
+
+    <section id="skills" data-aos="fade-up" data-aos-duration="1000">
+      <h2>Skills</h2>
+      <div class="skills-icons">
+        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" />
+        <img src="https://img.icons8.com/color/48/000000/power-bi.png" />
+        <img src="https://img.icons8.com/color/48/000000/tableau-software.png" />
+        <img src="https://img.icons8.com/color/48/000000/sql.png" />
+      </div>
+      <ul class="skills-list">
+        <li>📊 Analytical Skills</li>
+        <li>Data Manipulation & Processing</li>
+        <li>Exploratory Data Analysis (EDA)</li>
+        <li>Data Visualization & Reporting</li>
+        <li>Statistical Analysis</li>
+        <li>Problem-Solving & Business Insight</li>
+      </ul>
+    </section>
+
+    <section id="projects" data-aos="fade-up" data-aos-duration="1000">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Hand Gesture Recognition</h3>
+        <p><strong>Tech:</strong> Python, OpenCV, MediaPipe, NumPy</p>
+        <ul>
+          <li>Real-time gesture recognition using AI and computer vision</li>
+          <li>Gesture classification using CNN</li>
+          <li>MediaPipe for 21-point landmark detection</li>
+        </ul>
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*0nPBTCJo93jMYt0opwRjzw.gif" alt="Hand AI" />
+      </div>
+      <div class="project">
+        <h3>CGPA Calculator App</h3>
+        <p><strong>Tech:</strong> Python, Java/Kotlin, Android Studio</p>
+        <ul>
+          <li>Calculates semester-wise & cumulative CGPA</li>
+          <li>Responsive UI for college students</li>
+        </ul>
+        <img src="https://i.pinimg.com/originals/f5/3d/97/f53d973f89e841c300c65e0a47ce13c2.gif" alt="CGPA App" />
+      </div>
+    </section>
+
+    <section id="services" data-aos="fade-up" data-aos-duration="1000">
+      <h2>Services</h2>
+      <div class="service">
+        <h4>🛠️ Data Analysis & Business Intelligence</h4>
+        <p>Data cleaning, EDA, visualization, dashboard creation in Excel, Python, Power BI, Tableau.</p>
+      </div>
+      <div class="service">
+        <h4>🌐 Web Development</h4>
+        <p>Modern and responsive websites using HTML, CSS, JS, PHP with backend integration.</p>
+      </div>
+      <div class="service">
+        <h4>📱 App Development</h4>
+        <p>Utility Android apps built with Java/Kotlin & Python backends, optimized for students and businesses.</p>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up" data-aos-duration="1000">
+      <h2>Contact Me</h2>
+      <p>Have a project or idea? Let's work together!</p>
+      <ul>
+        <li>📧 Email: muhamedasfak60@gmail.com</li>
+        <li>📱 Phone: +91 97519 97851</li>
+        <li>🔗 LinkedIn: <a href="https://linkedin.com/in/muhamed-asfak-5551a0255">View Profile</a></li>
+        <li>🐱 GitHub: <a href="https://github.com/asfakit">github.com/asfakit</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+    function hamburg() {
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+    function cancel() {
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+  </script>
+</body>
+</html>
